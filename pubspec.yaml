@@ -22,6 +22,7 @@ dependencies:
   logger: ^2.6.1
   url_launcher: ^6.3.2
   get_storage: ^2.1.1
+  flutter_native_splash: ^2.4.6
 
 
   # ICONS
@@ -80,6 +81,18 @@ flutter:
         - asset: assets/fonts/Poppins-Medium.ttf
 
 # ----------------------------- END LOCAL FONTS ------------------------ #
+
+flutter_native_splash:
+  color: "#FFFFFF"
+  color_dark: "#272727"
+  image: assets/logos/dark_logo.png
+  image_dark: assets/logos/light_logo.png
+  android_12:
+    color: "#FFFFFF"
+    color_dark: "#272727"
+    image: assets/logos/dark_logo.png
+    image_dark: assets/logos/light_logo.png
+  web: false
   uses-material-design: true
 
   
