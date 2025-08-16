@@ -61,7 +61,7 @@ flutter:
 
 
 # ----------------------------- LOCAL ASSETS ------------------------ #
-
+  uses-material-design: true
   assets:
     - assets/logos/
     - assets/images/
@@ -82,18 +82,8 @@ flutter:
 
 # ----------------------------- END LOCAL FONTS ------------------------ #
 
-flutter_native_splash:
-  color: "#FFFFFF"
-  color_dark: "#272727"
-  image: assets/logos/dark_logo.png
-  image_dark: assets/logos/light_logo.png
-  android_12:
-    color: "#FFFFFF"
-    color_dark: "#272727"
-    image: assets/logos/dark_logo.png
-    image_dark: assets/logos/light_logo.png
-  web: false
-  uses-material-design: true
+
+
 
   
   
