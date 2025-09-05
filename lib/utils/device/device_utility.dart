@@ -4,4 +4,8 @@ class CDeviceUtility {
   static double getAppBarHeigh() {
     return kToolbarHeight;
   }
+
+  static double getBottomNavigationBarHeight() {
+    return kBottomNavigationBarHeight;
+  }
 }
