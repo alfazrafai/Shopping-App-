@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:shopping_app/common/styles/CSpacingStyle.dart';
 import 'package:shopping_app/features/authentication/screens/login/widgets/LoginDivider.dart';
 import 'package:shopping_app/features/authentication/screens/login/widgets/LoginFooter.dart';
@@ -22,6 +21,7 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             children: [
               LoginHeader(dark: dark),
+              SizedBox(height: CSizes.lg),
               LoginForm(),
               SizedBox(height: CSizes.lg),
               LoginDivider(),
