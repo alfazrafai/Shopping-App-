@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shopping_app/common/styles/CSpacingStyle.dart';
+import 'package:shopping_app/features/authentication/screens/login/widgets/LoginDivider.dart';
+import 'package:shopping_app/features/authentication/screens/login/widgets/LoginFooter.dart';
 import 'package:shopping_app/features/authentication/screens/signup/widgets/signup_form.dart';
 import 'package:shopping_app/utils/constant/colors.dart';
 import 'package:shopping_app/utils/constant/sizes.dart';
@@ -25,8 +27,11 @@ class SignupScreen extends StatelessWidget {
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
               SizedBox(height: CSizes.lg),
-
               SignupForm(dark: dark),
+              SizedBox(height: CSizes.lg),
+              LoginDivider(),
+              SizedBox(height: CSizes.lg),
+              LoginFooter(),
             ],
           ),
         ),

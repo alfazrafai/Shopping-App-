@@ -42,38 +42,39 @@ class CTextFieldTheme {
 
   static InputDecorationTheme darkInputDecorationTheme = InputDecorationTheme(
     errorMaxLines: 3,
-    prefixIconColor: Colors.grey,
-    suffixIconColor: Colors.grey,
+    prefixIconColor: Colors.white70,
+    suffixIconColor: Colors.white70,
 
-    labelStyle: TextStyle().copyWith(fontSize: 14.0, color: Colors.black),
-    hintStyle: TextStyle().copyWith(fontSize: 14.0, color: Colors.black),
-    errorStyle: TextStyle().copyWith(fontStyle: FontStyle.normal),
+    labelStyle: const TextStyle(fontSize: 14.0, color: Colors.white),
+    hintStyle: const TextStyle(fontSize: 14.0, color: Colors.white70),
+    errorStyle: const TextStyle(fontStyle: FontStyle.normal, color: Colors.red),
     floatingLabelStyle: TextStyle().copyWith(
-      color: Colors.black.withOpacity(0.8),
+      color: Colors.white.withOpacity(0.9),
     ),
 
-    border: OutlineInputBorder().copyWith(
+    border: OutlineInputBorder(
       borderRadius: BorderRadius.circular(14),
-      borderSide: BorderSide(width: 1, color: Colors.grey),
+      borderSide: const BorderSide(width: 1, color: Colors.white70),
     ),
 
-    enabledBorder: OutlineInputBorder().copyWith(
+    enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(14),
-      borderSide: BorderSide(width: 1, color: Colors.grey),
+      borderSide: const BorderSide(width: 1, color: Colors.white54),
     ),
 
-    focusedBorder: OutlineInputBorder().copyWith(
+    focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(14),
-      borderSide: BorderSide(width: 1, color: Colors.black12),
-    ),
-    errorBorder: OutlineInputBorder().copyWith(
-      borderRadius: BorderRadius.circular(14),
-      borderSide: BorderSide(width: 1, color: Colors.red),
+      borderSide: const BorderSide(width: 1.5, color: Colors.blueAccent),
     ),
 
-    focusedErrorBorder: OutlineInputBorder().copyWith(
+    errorBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(14),
-      borderSide: BorderSide(width: 1, color: Colors.orange),
+      borderSide: const BorderSide(width: 1, color: Colors.red),
+    ),
+
+    focusedErrorBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(14),
+      borderSide: const BorderSide(width: 1.5, color: Colors.orange),
     ),
   );
 }
