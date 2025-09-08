@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:shopping_app/utils/constant/sizes.dart';
 import 'package:shopping_app/utils/helper/CHelperClass.dart';
 
+import '../../../../common/widgets/success_screen.dart';
 import '../login/LoginScreen.dart';
 
 class VerifyEmailScreen extends StatelessWidget {
@@ -55,7 +56,9 @@ class VerifyEmailScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(SuccessScreen());
+                  },
                   child: Text("Continue"),
                 ),
               ),
