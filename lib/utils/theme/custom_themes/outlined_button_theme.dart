@@ -5,9 +5,9 @@ class COutlinedButtonTheme {
 
   static OutlinedButtonThemeData lightElevatedButtonTheme =
       OutlinedButtonThemeData(
-        style: ElevatedButton.styleFrom(
+        style: OutlinedButton.styleFrom(
           elevation: 0,
-          foregroundColor: Colors.white,
+          foregroundColor: Colors.black,
           backgroundColor: Colors.blue,
           disabledForegroundColor: Colors.grey,
           disabledBackgroundColor: Colors.grey,
@@ -15,7 +15,7 @@ class COutlinedButtonTheme {
           padding: EdgeInsets.symmetric(vertical: 18),
           textStyle: TextStyle(
             fontSize: 16,
-            color: Colors.white,
+            color: Colors.black,
             fontWeight: FontWeight.w500,
           ),
           shape: RoundedRectangleBorder(
@@ -26,7 +26,7 @@ class COutlinedButtonTheme {
 
   static OutlinedButtonThemeData dartElevatedButtonTheme =
       OutlinedButtonThemeData(
-        style: ElevatedButton.styleFrom(
+        style: OutlinedButton.styleFrom(
           elevation: 0,
           foregroundColor: Colors.white,
           backgroundColor: Colors.blue,
