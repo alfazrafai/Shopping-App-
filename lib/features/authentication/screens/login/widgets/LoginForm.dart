@@ -4,6 +4,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shopping_app/utils/constant/sizes.dart';
 
+import '../../password_configration/forgot_password.dart';
 import '../../signup/signup_screen.dart';
 
 class LoginForm extends StatelessWidget {
@@ -40,7 +41,9 @@ class LoginForm extends StatelessWidget {
                 ),
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(ForgotPasswordScreen());
+                },
                 child: Text(
                   "Forgot Password",
                   style: Theme.of(context).textTheme.labelMedium,
