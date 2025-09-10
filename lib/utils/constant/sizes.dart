@@ -24,6 +24,10 @@ class CSizes {
   static const double fontSizeXl = 22.0;
   static const double fontSizeXxl = 26.0;
 
+  // Card Sizes
+  static const double cardRadiusLg = 16.0;
+  static const double cardRadiusMd = 12.0;
+  static const double cardRadiusSm = 10.0;
   // Button Sizes
   static const double buttonHeight = 48.0;
   static const double buttonRadius = 12.0;
