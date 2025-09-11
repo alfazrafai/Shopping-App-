@@ -7,8 +7,8 @@ class CCircularContainer extends StatelessWidget {
     super.key,
     this.width,
     this.height,
-    this.radius = 300,
-    this.padding = 0,
+    this.radius,
+    this.padding,
     this.color = CColors.white,
     this.child,
     this.margin,
@@ -16,8 +16,8 @@ class CCircularContainer extends StatelessWidget {
 
   final double? width;
   final double? height;
-  final double radius;
-  final double? padding;
+  final double? radius;
+  final EdgeInsetsGeometry? padding;
   final EdgeInsets? margin;
   final Color color;
   final Widget? child;
@@ -28,9 +28,9 @@ class CCircularContainer extends StatelessWidget {
       width: width,
       height: height,
       margin: margin,
-      padding: EdgeInsets.all(0),
+      padding: padding,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(300),
+        borderRadius: BorderRadius.circular(5),
         color: color,
       ),
       child: child,

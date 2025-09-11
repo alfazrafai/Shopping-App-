@@ -17,25 +17,28 @@ class PromoSlider extends StatelessWidget {
 
     return Column(
       children: [
-        CarouselSlider(
-          items: [
-            CRoundedImage(imageURL: 'assets/images/banners/discount.jpeg'),
-            CRoundedImage(imageURL: 'assets/images/banners/discount.jpeg'),
-            CRoundedImage(imageURL: 'assets/images/banners/discount.jpeg'),
-          ],
-          options: CarouselOptions(
-            viewportFraction: 1,
-            enableInfiniteScroll: false,
-            // Disable infinite looping
-            initialPage: 0,
-            // Start at the first slide
-            autoPlay: false,
-            // Disable auto-play for clarity
-            scrollDirection: Axis.horizontal,
-            // Explicitly set scroll direction
-            onPageChanged: (index, _) {
-              controller.updatePageIndicator(index);
-            },
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: CarouselSlider(
+            items: [
+              CRoundedImage(imageURL: 'assets/images/banners/discount.jpeg'),
+              CRoundedImage(imageURL: 'assets/images/banners/discount.jpeg'),
+              CRoundedImage(imageURL: 'assets/images/banners/discount.jpeg'),
+            ],
+            options: CarouselOptions(
+              viewportFraction: 1,
+              enableInfiniteScroll: false,
+              // Disable infinite looping
+              initialPage: 0,
+              // Start at the first slide
+              autoPlay: false,
+              // Disable auto-play for clarity
+              scrollDirection: Axis.horizontal,
+              // Explicitly set scroll direction
+              onPageChanged: (index, _) {
+                controller.updatePageIndicator(index);
+              },
+            ),
           ),
         ),
         SizedBox(height: CSizes.sm),

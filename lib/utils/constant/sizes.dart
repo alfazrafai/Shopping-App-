@@ -56,4 +56,6 @@ class CSizes {
 
   // Default Spacing
   static const double defaultSpacing = 16.0;
+
+  static const double gridViewSpacing = 16.0;
 }
