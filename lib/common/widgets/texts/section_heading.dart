@@ -31,7 +31,7 @@ class CSectionHeading extends StatelessWidget {
             onPressed: onActionButtonPressed,
             child: Text(
               actionButtonTitle,
-              style: Theme.of(context).textTheme.headlineSmall,
+              style: Theme.of(context).textTheme.titleSmall,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),

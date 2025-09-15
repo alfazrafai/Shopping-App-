@@ -8,6 +8,7 @@ import 'package:shopping_app/utils/helper/CHelperClass.dart';
 
 import '../../../utils/constant/colors.dart';
 import '../icons/custom_circular_icon.dart';
+import '../texts/brand_title_text_with_verified_icon.dart';
 import '../texts/product_title_text.dart';
 
 class CProductVerticalCard extends StatelessWidget {
@@ -76,59 +77,50 @@ class CProductVerticalCard extends StatelessWidget {
               padding: const EdgeInsets.all(CSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+
                 children: [
                   CProductTitleText(title: 'Product name', isSmallText: true),
                   SizedBox(height: CSizes.sm),
-                  Row(
-                    children: [
-                      Text(
-                        "Nike",
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      SizedBox(width: CSizes.xs),
-                      Icon(
-                        Iconsax.verify5,
-                        color: CColors.primary,
-                        size: CSizes.iconXs,
-                      ),
-                    ],
-                  ),
 
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "\$20",
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: Theme.of(context).textTheme.headlineMedium,
-                      ),
-
-                      Container(
-                        decoration: BoxDecoration(
-                          color: dark ? CColors.white : CColors.darkGrey,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(16),
-                            bottomRight: Radius.circular(12),
-                          ),
-                        ),
-                        child: SizedBox(
-                          width: CSizes.iconLg * 1.2,
-                          height: CSizes.iconLg * 1.2,
-                          child: Center(
-                            child: Icon(
-                              Iconsax.add,
-                              color: dark ? CColors.black : CColors.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  CBrandTitleTextWithVerifiedIcon(title: 'Nike'),
                 ],
               ),
+            ),
+            Spacer(),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: Text(
+                    "\$20",
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: Theme.of(context).textTheme.headlineMedium,
+                  ),
+                ),
+
+                Container(
+                  decoration: BoxDecoration(
+                    color: dark ? CColors.white : CColors.darkGrey,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(16),
+                      bottomRight: Radius.circular(12),
+                    ),
+                  ),
+                  child: SizedBox(
+                    width: CSizes.iconLg * 1.2,
+                    height: CSizes.iconLg * 1.2,
+                    child: Center(
+                      child: Icon(
+                        Iconsax.add,
+                        color: dark ? CColors.black : CColors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),

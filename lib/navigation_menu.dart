@@ -5,6 +5,8 @@ import 'package:shopping_app/features/shop/screens/home/home.dart';
 import 'package:shopping_app/utils/constant/colors.dart';
 import 'package:shopping_app/utils/helper/CHelperClass.dart';
 
+import 'features/shop/screens/store/store.dart';
+
 class NavigationMenu extends StatefulWidget {
   const NavigationMenu({super.key});
 
@@ -44,5 +46,5 @@ class _NavigationMenuState extends State<NavigationMenu> {
 class NavigationBarController extends GetxController {
   final RxInt selectedIndex = 0.obs;
 
-  final screens = [HomeScreen()];
+  final screens = [HomeScreen(), StoreScreen(), StoreScreen(), StoreScreen()];
 }

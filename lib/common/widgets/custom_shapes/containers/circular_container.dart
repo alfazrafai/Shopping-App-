@@ -31,6 +31,7 @@ class CCircularContainer extends StatelessWidget {
       padding: padding,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5),
+        border: Border.all(color: CColors.grey),
         color: color,
       ),
       child: child,
