@@ -18,4 +18,8 @@ class CHelperFunctions {
   static double screenWith(BuildContext context) {
     return MediaQuery.of(Get.context!).size.width;
   }
+
+  static double getAppBarHeight() {
+    return AppBar().preferredSize.height;
+  }
 }
