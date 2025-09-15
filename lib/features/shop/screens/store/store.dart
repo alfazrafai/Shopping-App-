@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopping_app/common/layout/grid_layout.dart';
 import 'package:shopping_app/common/widgets/appbar/appbar.dart';
 import 'package:shopping_app/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:shopping_app/common/widgets/custom_shapes/containers/search_container.dart';
@@ -7,6 +8,7 @@ import 'package:shopping_app/common/widgets/texts/brand_title_text_with_verified
 import 'package:shopping_app/common/widgets/texts/section_heading.dart';
 import 'package:shopping_app/utils/constant/colors.dart';
 import 'package:shopping_app/utils/constant/sizes.dart';
+import 'package:shopping_app/utils/enums/enum_text_sizes.dart';
 import 'package:shopping_app/utils/helper/CHelperClass.dart';
 
 import '../../../../common/widgets/images/circular_image.dart';
@@ -51,26 +53,50 @@ class StoreScreen extends StatelessWidget {
                     CSectionHeading(sectionTitle: 'Featured Brands'),
 
                     SizedBox(height: CSizes.sm),
+                    CGridLayout(
+                      itemCount: 4,
+                      mainAxisExtent: 70,
+                      itemBuilder: (_, index) {
+                        return GestureDetector(
+                          onTap: () {},
+                          child: CCircularContainer(
+                            padding: EdgeInsets.all(CSizes.sm),
 
-                    CCircularContainer(
-                      padding: EdgeInsets.all(CSizes.sm),
+                            child: Row(
+                              children: [
+                                Flexible(
+                                  child: CCircularImage(
+                                    image:
+                                        'assets/images/banners/discount.jpeg',
+                                    isNetworkImage: false,
+                                  ),
+                                ),
 
-                      child: Row(
-                        children: [
-                          CCircularImage(
-                            image: 'assets/images/banners/discount.jpeg',
-                            isNetworkImage: false,
+                                SizedBox(width: CSizes.sm),
+
+                                Expanded(
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      CBrandTitleTextWithVerifiedIcon(
+                                        title: "Nike",
+                                        brandTextSize: TextSizes.large,
+                                      ),
+                                      Text(
+                                        "200 product vdfhdgxcvsdgbv",
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
-
-                          SizedBox(width: CSizes.sm),
-
-                          Column(
-                            children: [
-                              CBrandTitleTextWithVerifiedIcon(title: "text"),
-                            ],
-                          ),
-                        ],
-                      ),
+                        );
+                      },
                     ),
                   ],
                 ),

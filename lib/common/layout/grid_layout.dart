@@ -8,17 +8,17 @@ class CGridLayout extends StatelessWidget {
     super.key,
     required this.itemCount,
     required this.itemBuilder,
-    this.mainAxisSpacing = 288,
+    this.mainAxisExtent = 288,
   });
 
   final int itemCount;
-  final Widget? Function(BuildContext, int) itemBuilder;
-  final double? mainAxisSpacing;
+  final Widget Function(BuildContext, int) itemBuilder;
+  final double? mainAxisExtent;
 
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      itemCount: 6,
+      itemCount: itemCount,
       shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
 
@@ -26,9 +26,9 @@ class CGridLayout extends StatelessWidget {
         crossAxisCount: 2,
         mainAxisSpacing: CSizes.gridViewSpacing,
         crossAxisSpacing: CSizes.gridViewSpacing,
-        mainAxisExtent: 300,
+        mainAxisExtent: mainAxisExtent,
       ),
-      itemBuilder: (_, index) => CProductVerticalCard(),
+      itemBuilder: itemBuilder,
     );
   }
 }
