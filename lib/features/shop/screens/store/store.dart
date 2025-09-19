@@ -70,26 +70,23 @@ class StoreScreen extends StatelessWidget {
                   ),
                 ),
 
-                bottom: PreferredSize(
-                  preferredSize: Size.fromHeight(kToolbarHeight),
-                  child: TabBar(
-                    indicatorColor: CColors.primary,
-                    isScrollable: true,
-                    unselectedLabelColor: CColors.darkGrey,
-                    labelColor: CHelperFunctions.isDark(context)
-                        ? CColors.white
-                        : CColors.black,
-                    padding: EdgeInsets.zero,
-                    tabAlignment: TabAlignment.start,
-                    tabs: [
-                      Tab(child: Text("Sports")),
-                      Tab(child: Text("Furniture")),
-                      Tab(child: Text("Clothes")),
-                      Tab(child: Text("Toys")),
-                      Tab(child: Text("Shoes")),
-                      Tab(child: Text("Electronics")),
-                    ],
-                  ),
+                bottom: TabBar(
+                  indicatorColor: CColors.primary,
+                  isScrollable: true,
+                  unselectedLabelColor: CColors.darkGrey,
+                  labelColor: CHelperFunctions.isDark(context)
+                      ? CColors.white
+                      : CColors.black,
+                  padding: EdgeInsets.zero,
+                  tabAlignment: TabAlignment.start,
+                  tabs: [
+                    Tab(child: Text("Sports")),
+                    Tab(child: Text("Furniture")),
+                    Tab(child: Text("Clothes")),
+                    Tab(child: Text("Toys")),
+                    Tab(child: Text("Shoes")),
+                    Tab(child: Text("Electronics")),
+                  ],
                 ),
               ),
             ];
